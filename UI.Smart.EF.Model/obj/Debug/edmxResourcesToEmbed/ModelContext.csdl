@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LAB1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Fac">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FK_uniId" Type="Int32" />
+    <NavigationProperty Name="Uni" Relationship="Self.FK_Fac_Uni" FromRole="Fac" ToRole="Uni" />
+  </EntityType>
+  <EntityType Name="Uni">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Facs" Relationship="Self.FK_Fac_Uni" FromRole="Uni" ToRole="Fac" />
+  </EntityType>
+  <Association Name="FK_Fac_Uni">
+    <End Role="Uni" Type="Self.Uni" Multiplicity="0..1" />
+    <End Role="Fac" Type="Self.Fac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uni">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Fac">
+        <PropertyRef Name="FK_uniId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LAB1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Facs" EntityType="Self.Fac" />
+    <EntitySet Name="Unis" EntityType="Self.Uni" />
+    <AssociationSet Name="FK_Fac_Uni" Association="Self.FK_Fac_Uni">
+      <End Role="Uni" EntitySet="Unis" />
+      <End Role="Fac" EntitySet="Facs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

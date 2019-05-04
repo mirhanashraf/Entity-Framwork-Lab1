@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LAB1ModelStoreContainer" CdmEntityContainer="LAB1Entities">
+    <EntitySetMapping Name="Facs">
+      <EntityTypeMapping TypeName="LAB1Model.Fac">
+        <MappingFragment StoreEntitySet="Fac">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FK_uniId" ColumnName="FK_uniId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unis">
+      <EntityTypeMapping TypeName="LAB1Model.Uni">
+        <MappingFragment StoreEntitySet="Uni">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

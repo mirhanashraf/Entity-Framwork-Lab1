@@ -1,0 +1,16 @@
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.PL.exe.config
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.PL.exe
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.PL.pdb
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\EntityFramework.dll
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\EntityFramework.SqlServer.dll
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\EntityFramework.xml
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\EntityFramework.SqlServer.xml
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\obj\Debug\UI.Smart.EF.PL.csprojResolveAssemblyReference.cache
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\obj\Debug\UI.Smart.EF.PL.exe
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\obj\Debug\UI.Smart.EF.PL.pdb
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.BLL.dll
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.Model.dll
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.Repository.dll
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.BLL.pdb
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.Model.pdb
+G:\ITI Folder\Entity Framework\Ass1\UI.Smart.EF.PL\bin\Debug\UI.Smart.EF.Repository.pdb

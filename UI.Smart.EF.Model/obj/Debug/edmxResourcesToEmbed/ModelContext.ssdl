@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LAB1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Fac">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FK_uniId" Type="int" />
+  </EntityType>
+  <EntityType Name="Uni">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Fac_Uni">
+    <End Role="Uni" Type="Self.Uni" Multiplicity="0..1" />
+    <End Role="Fac" Type="Self.Fac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uni">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Fac">
+        <PropertyRef Name="FK_uniId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LAB1ModelStoreContainer">
+    <EntitySet Name="Fac" EntityType="Self.Fac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uni" EntityType="Self.Uni" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Fac_Uni" Association="Self.FK_Fac_Uni">
+      <End Role="Uni" EntitySet="Uni" />
+      <End Role="Fac" EntitySet="Fac" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
